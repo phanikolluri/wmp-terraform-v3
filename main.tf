@@ -15,7 +15,7 @@ resource "aws_route53_record" "route-setup" {
   name    = "${each.key}-dev"
   type    = "A"
   ttl     = 30
-  records = ["aws_instance.instance[each.key].private_ip"]
+  records = [aws_instance.instance[each.key].private_ip]
 }
 
 
